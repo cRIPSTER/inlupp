@@ -135,12 +135,11 @@ namespace Inlämningsuppgift_MVC.Controllers
                     SearchCategory = SearchCategory,
                     SearchProduct = SearchProduct
                 };
-                model.Categories.AddRange(db.Categories.ToList().Select(r => new ViewModels.BilIndexViewModel.BilListViewModel
+                model.Categories.AddRange(db.Categories.ToList().Select(r => new ViewModels.CategoryIndexViewModel.CategoryListViewModel
                 {
-                    Manufacturer = r.Manufacturer,
-                    Model = r.Model,
-                    Year = r.Year,
-                    Id = r.Id
+                    CategoryId = r.CategoryId,
+                    Name = r.Name,
+                    Product = r.Products.ToString(),
                 }).Where(c => Matches(c, SearchCategory, SearchProduct)
                     ));
 
