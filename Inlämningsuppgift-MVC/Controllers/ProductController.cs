@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -63,7 +64,8 @@ namespace Inlämningsuppgift_MVC.Controllers
             var model = new ViewModels.CategoryCreateViewModel();
             return View(model);
         }
-
+        
+        
         [HttpPost]
         public ActionResult CategoryCreate(ViewModels.CategoryIndexViewModel.CategoryListViewModel model)
         {

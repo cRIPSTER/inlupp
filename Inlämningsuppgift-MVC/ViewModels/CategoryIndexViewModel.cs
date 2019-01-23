@@ -17,6 +17,7 @@ namespace Inlämningsuppgift_MVC.ViewModels
         public class CategoryListViewModel
         {
             public int CategoryId { get; set; }
+            
             public string Name { get; set; }
             public string Product{ get; set; }
         }
