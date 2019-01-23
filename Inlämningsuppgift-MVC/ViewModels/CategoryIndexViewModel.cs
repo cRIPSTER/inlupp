@@ -7,7 +7,6 @@ namespace Inlämningsuppgift_MVC.ViewModels
 {
     public class CategoryIndexViewModel
     {
-        public string SearchCategory { get; set; }
         public string SearchProduct { get; set; }
 
         public CategoryIndexViewModel()
@@ -22,7 +21,6 @@ namespace Inlämningsuppgift_MVC.ViewModels
             public string Product{ get; set; }
         }
         public List<CategoryListViewModel> Categories { get; set; }
-
         public string CurrentSort { get; set; }
     }
 }

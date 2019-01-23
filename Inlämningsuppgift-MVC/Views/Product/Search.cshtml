@@ -1,0 +1,30 @@
+﻿@model Inlämningsuppgift_MVC.ViewModels.ProductIndexViewModel
+
+@{
+    ViewBag.Title = "Search";
+}
+<p>
+    @Html.ActionLink("Return", "Index", new { })
+</p>
+
+<h2>Search result</h2>
+<table class="table">
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+        <td>
+            Name: @item.Name
+        </td>
+        </tr>
+        <tr>
+        <td>
+            Price: @item.Price Kr
+        </td>
+        </tr>
+        <tr>
+        <td>
+            Description: @item.Description
+        </td>
+        </tr>
+    }
+</table>

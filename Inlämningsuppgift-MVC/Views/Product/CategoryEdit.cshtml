@@ -1,0 +1,31 @@
+﻿@model Inlämningsuppgift_MVC.ViewModels.CategoryEditViewModel
+
+@{
+    ViewBag.Title = "Category Edit";
+}
+
+<p>
+    @Html.ActionLink("Return", "Index", new { })
+</p>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>Namn</td>
+            <td>
+                @Html.HiddenFor(model => model.CategoryId)
+                @Html.TextBoxFor(model => model.Name)
+
+                @Html.ValidationMessageFor(model => model.Name)
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Spara" />
+
+}

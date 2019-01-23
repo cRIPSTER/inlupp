@@ -1,0 +1,23 @@
+﻿@model Inlämningsuppgift_MVC.ViewModels.CategoryCreateViewModel
+@{
+    ViewBag.Title = "Category Create";
+}
+<h2>Create New Category</h2>
+<p>
+    @Html.ActionLink("Return", "Index", new { })
+</p>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <td>Namn</td>
+            <td>
+                @Html.TextBoxFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Spara" />
+
+}

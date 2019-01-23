@@ -1,0 +1,15 @@
+﻿@model Inlämningsuppgift_MVC.ViewModels.ProductViewViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<p>
+    @Html.ActionLink("Return", "Index", new { })
+</p>
+
+<table class="table">
+    <tr>
+        <td>@Model.Name </td>
+        <td>@Model.Price Kr </td>
+        <td>@Model.Description</td>
+    </tr>
+</table>

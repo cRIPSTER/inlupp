@@ -1,0 +1,54 @@
+﻿@model Inlämningsuppgift_MVC.ViewModels.ProductIndexViewModel
+@{
+    ViewBag.Title = "CategoryView";
+}
+
+<h2>CategoryView</h2>
+
+<p>
+    @Html.ActionLink("Create New Product", "ProductCreate")
+</p>
+
+<p>
+    @Html.ActionLink("Return", "Index", new { })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @if (Model.CurrentSort == "NamnAsc")
+            {
+                @Html.ActionLink("Namn DESC", "CategoryView", new { sort = "NamnDesc" })
+            }
+            else
+            {
+                @Html.ActionLink("Namn ASC", "CategoryView", new { sort = "NamnAsc" })
+            }
+
+        </th>
+        <th>
+            @if (Model.CurrentSort == "PriceAsc")
+            {
+                @Html.ActionLink("Price DESC", "CategoryView", new { sort = "PriceDesc" })
+            }
+            else
+            {
+                @Html.ActionLink("Price ASC", "CategoryView", new { sort = "PriceAsc" })
+            }
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price Kr</td>
+
+            <td>
+                @Html.ActionLink("Edit", "ProductEdit", new { id = item.ProductId }) |
+                @Html.ActionLink("View", "ProductView", new { id = item.ProductId })
+            </td>
+        </tr>
+    }
+
+</table>

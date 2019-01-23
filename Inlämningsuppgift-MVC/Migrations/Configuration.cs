@@ -14,7 +14,7 @@ namespace Inlämningsuppgift_MVC.Migrations
 
         protected override void Seed(Inlämningsuppgift_MVC.Models.CategoryDb context)
         {
-            context.Categories.AddOrUpdate(c => c.CategoryId,
+            /*context.Categories.AddOrUpdate(c => c.CategoryId,
             new Models.Category { CategoryId = 1, Name = "Chocolate" },
             new Models.Category { CategoryId = 2, Name = "Fruits" },
             new Models.Category { CategoryId = 3, Name = "Cheese" },
@@ -33,7 +33,7 @@ namespace Inlämningsuppgift_MVC.Migrations
                 new Models.Product { ProductId = 6, Category = context.Categories.FirstOrDefault(c => c.CategoryId == 5), Name = "Beef", Description = "Mooo", Price = 109 }
                 );
 
-            context.SaveChanges();
+            context.SaveChanges();*/
         }
     }
 }
